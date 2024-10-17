@@ -1,0 +1,414 @@
+@import 'rootColors.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+
+body {
+    font-size: .875em;
+    background-color: $White-BG;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0 1em;
+}
+
+@keyframes upArr {
+    0% {
+        position: absolute;
+        top: .4em;
+    }
+
+    100% {
+     
+        position: absolute;
+        top: .7em;
+    }
+}
+
+@keyframes dwArr {
+    0% {
+        position: absolute;
+        top: .4em;
+    }
+
+    100% {
+     
+        position: absolute;
+        top: .7em;
+    }
+}
+
+@keyframes move {
+    0%{
+      
+        position: absolute;
+        left: 0;
+    }
+
+    100%{
+        position: absolute;
+        left: 3.5em;
+    }
+}
+@keyframes moveback {
+    0%{
+      
+        position: absolute;
+        left: 3.5em;
+    }
+
+    100%{
+        position: absolute;
+        left: 0;
+    }
+}
+
+
+.bg.dark {
+    position:absolute;
+    left: 0;
+    width: 100vw;
+    background-color: $Very-Dark-Blue-BG ;
+    border: 1px solid $Very-Dark-Blue-BG ;
+}
+
+section {
+    margin: 50px auto;
+    max-width: 330px;
+
+
+
+    
+    .top-header {
+        position: relative;
+        top: 20px;
+        z-index: 1;
+    }
+
+    
+    h1 {
+        font-size: 1.5em;
+        color: $Very-Dark-Blue-Text;
+        margin-bottom: .2em;
+    }
+
+    .t.dark, .dark.on{
+        color: $White-Text;
+    }
+
+
+    hr {
+     margin: 1em 0;
+    }
+
+    .d-flex {
+        margin: 1em 0;
+        display: flex;
+        justify-content: space-between;
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .top-follow-text {
+        font-weight: 700;
+        color: $Dark-Grayish-Blue-Text;
+    }
+
+    .top-bg {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        height: 250px;
+        background-color: $Very-Pale-Blue-Top-BG-Pattern;
+    }
+
+
+
+
+    .top-bg.darkT {
+        background-color: $Very-Dark-Blue-Top-BG-Pattern;
+    }
+
+    .btn {
+        width: 80px;
+        height: 30px;
+        border: none;
+        background: $Toggle;
+        border-radius: 25px;
+        position: relative;
+    }
+
+    .btn.on {
+        background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    } 
+
+    .bubble {
+        position: absolute;
+        top: .2em;
+        margin-left: .2em;
+        width: 25px;
+        height: 25px;
+        border-radius: 50px;
+        background-color: $White-BG;
+        
+       animation: moveback ease-in-out .5s;
+    }
+
+
+    .bubble.on {
+        position: absolute;
+        left: 3.5em;
+       animation: move ease-in-out .5s;
+    }
+
+
+
+    #dashboard {
+        .dash {
+            
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin-top: 3em;
+        gap: 25px;
+
+            margin: 1em 0;
+        }
+
+        .subCard.dark,.topCards.dark {
+            background-color: $Dark-Desaturated-Blue-Card-BG;
+            color: $White-Text;
+        } 
+
+        
+
+        .item {
+            position: relative;
+            z-index: 1;
+            grid-column: 250px;
+            background-color: $Light-Grayish-Blue-Card-BG;
+            border-radius: 10px;
+
+            .row {
+                display: flex;
+                align-items: flex-end;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .itemColo {
+            z-index: 1;
+            max-width: 100%;
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+            margin: 1em 0;
+        }
+
+        .subCard {
+            height: 150px;
+            padding: 2em;
+            border: 0 0 10px 10px;
+
+            .row-item-card {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .card-item-title {
+                font-size: 1.2em;
+                color: $Dark-Grayish-Blue-Text;
+            }
+
+           
+
+            .views-title {
+                letter-spacing: 2px;
+                font-size: 3em;
+            }
+
+            .card2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                text-align: center;
+                padding-top: 2.2em;    
+
+                p {
+                    position: relative;
+                    top: -1em;
+                    img {
+                        position: absolute;
+                        top: .7em;
+                        left: -2.2em;
+                        margin: 0 1em;
+                    }
+                }
+            }
+        }
+
+        .faceColor {
+            background: $Facebook;
+        }
+
+        .twiColor {
+            background: $Twitter;
+        }
+
+        .instColor {
+            background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+        }
+
+        .youtColor {
+            background: $YouTube;
+        }
+
+
+        .dashboard-sub {
+            font-size: 1.7em;
+            
+            color: $Dark-Grayish-Blue-Text;
+        }
+
+        .dashboard-sub.dark  {
+          color: $White-Text;
+        }
+
+
+        .topCards {
+            margin-top: .5em;
+            height: 200px;
+
+            .space {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 20px;
+            }
+
+            .sub-top {
+                margin-top: .4em;
+                font-size: 3em;
+                
+                font-weight: 700 !important;
+            }
+
+            .subName {
+                font-size: 1em;
+                letter-spacing: 5px;
+                font-weight: 400;
+                margin: .5em 0 .8em 0;
+                text-transform: uppercase;
+                color: $Dark-Grayish-Blue-Text;
+
+                .title {
+                    color: $Very-Dark-Blue-Text;
+                }
+            }
+
+            
+
+           .row-item > p {
+           position: relative;
+            
+           img {
+            position: absolute;
+            top: .5em;
+            left: -1em;
+           }
+         
+
+           }
+
+
+
+
+        }
+    }
+
+    #dashboard {
+
+
+        .green-me, .red-me {
+            font-weight: 700;
+        }
+
+        .green-me {
+          color: $Lime-Green;
+        }
+
+        .red-me {
+          color: $Bright-Red;
+        }
+
+        .top {
+            position: absolute;
+            top: .2em;
+            left: -2.2em; 
+            animation: upArr infinite 1s;
+        }
+
+        .down {
+            position: absolute;
+            top: .2em;
+            left: 2.2em; 
+            
+            animation: dwArr infinite 1s;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+  section {
+  
+    margin: 10px auto;
+    max-width: 1300px;
+    padding: 2em;
+
+    .top-header {
+        position: relative;
+        top: 20px;
+        padding: 0 2em;
+        z-index: 1;
+    }
+
+  
+    #dashboard {
+        
+
+       .item {
+        
+        grid-column: 255px;
+       }
+        .dash {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+        }
+
+        .dashboard-sub {
+          margin:1.5em 0;
+        }
+  }
+
+  .top-bg {
+    height: 300px;
+}
+}
+}

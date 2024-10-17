@@ -1,0 +1,315 @@
+/*### Primary*/
+/*#### Dark Theme*/
+/*#### Light Theme*/
+/*#### Dark Theme*/
+/*#### Light Theme*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-size: 0.875em;
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 0 1em;
+}
+
+@keyframes upArr {
+  0% {
+    position: absolute;
+    top: 0.4em;
+  }
+  100% {
+    position: absolute;
+    top: 0.7em;
+  }
+}
+@keyframes dwArr {
+  0% {
+    position: absolute;
+    top: 0.4em;
+  }
+  100% {
+    position: absolute;
+    top: 0.7em;
+  }
+}
+@keyframes move {
+  0% {
+    position: absolute;
+    left: 0;
+  }
+  100% {
+    position: absolute;
+    left: 3.5em;
+  }
+}
+@keyframes moveback {
+  0% {
+    position: absolute;
+    left: 3.5em;
+  }
+  100% {
+    position: absolute;
+    left: 0;
+  }
+}
+.bg.dark {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  background-color: hsl(230, 17%, 14%);
+  border: 1px solid hsl(230, 17%, 14%);
+}
+
+section {
+  margin: 50px auto;
+  max-width: 330px;
+}
+section .top-header {
+  position: relative;
+  top: 20px;
+  z-index: 1;
+}
+section h1 {
+  font-size: 1.5em;
+  color: hsl(230, 17%, 14%);
+  margin-bottom: 0.2em;
+}
+section .t.dark, section .dark.on {
+  color: hsl(0, 0%, 100%);
+}
+section hr {
+  margin: 1em 0;
+}
+section .d-flex {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
+section .d-flex span {
+  font-weight: 700;
+}
+section .top-follow-text {
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+section .top-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  height: 250px;
+  background-color: hsl(225, 100%, 98%);
+}
+section .top-bg.darkT {
+  background-color: hsl(232, 19%, 15%);
+}
+section .btn {
+  width: 80px;
+  height: 30px;
+  border: none;
+  background: hsl(230, 22%, 74%);
+  border-radius: 25px;
+  position: relative;
+}
+section .btn.on {
+  background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+section .bubble {
+  position: absolute;
+  top: 0.2em;
+  margin-left: 0.2em;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: hsl(0, 0%, 100%);
+  animation: moveback ease-in-out 0.5s;
+}
+section .bubble.on {
+  position: absolute;
+  left: 3.5em;
+  animation: move ease-in-out 0.5s;
+}
+section #dashboard .dash {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 3em;
+  gap: 25px;
+  margin: 1em 0;
+}
+section #dashboard .subCard.dark, section #dashboard .topCards.dark {
+  background-color: hsl(228, 28%, 20%);
+  color: hsl(0, 0%, 100%);
+}
+section #dashboard .item {
+  position: relative;
+  z-index: 1;
+  grid-column: 250px;
+  background-color: hsl(227, 47%, 96%);
+  border-radius: 10px;
+}
+section #dashboard .item .row {
+  display: flex;
+  align-items: flex-end;
+}
+section #dashboard .item .row img {
+  margin-right: 10px;
+}
+section #dashboard .itemColo {
+  z-index: 1;
+  max-width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  margin: 1em 0;
+}
+section #dashboard .subCard {
+  height: 150px;
+  padding: 2em;
+  border: 0 0 10px 10px;
+}
+section #dashboard .subCard .row-item-card {
+  display: flex;
+  justify-content: space-between;
+}
+section #dashboard .subCard .card-item-title {
+  font-size: 1.2em;
+  color: hsl(228, 12%, 44%);
+}
+section #dashboard .subCard .views-title {
+  letter-spacing: 2px;
+  font-size: 3em;
+}
+section #dashboard .subCard .card2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
+  padding-top: 2.2em;
+}
+section #dashboard .subCard .card2 p {
+  position: relative;
+  top: -1em;
+}
+section #dashboard .subCard .card2 p img {
+  position: absolute;
+  top: 0.7em;
+  left: -2.2em;
+  margin: 0 1em;
+}
+section #dashboard .faceColor {
+  background: hsl(208, 92%, 53%);
+}
+section #dashboard .twiColor {
+  background: hsl(203, 89%, 53%);
+}
+section #dashboard .instColor {
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+section #dashboard .youtColor {
+  background: hsl(348, 97%, 39%);
+}
+section #dashboard .dashboard-sub {
+  font-size: 1.7em;
+  color: hsl(228, 12%, 44%);
+}
+section #dashboard .dashboard-sub.dark {
+  color: hsl(0, 0%, 100%);
+}
+section #dashboard .topCards {
+  margin-top: 0.5em;
+  height: 200px;
+}
+section #dashboard .topCards .space {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+section #dashboard .topCards .sub-top {
+  margin-top: 0.4em;
+  font-size: 3em;
+  font-weight: 700 !important;
+}
+section #dashboard .topCards .subName {
+  font-size: 1em;
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 0.5em 0 0.8em 0;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 44%);
+}
+section #dashboard .topCards .subName .title {
+  color: hsl(230, 17%, 14%);
+}
+section #dashboard .topCards .row-item > p {
+  position: relative;
+}
+section #dashboard .topCards .row-item > p img {
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+}
+section #dashboard .green-me, section #dashboard .red-me {
+  font-weight: 700;
+}
+section #dashboard .green-me {
+  color: hsl(163, 72%, 41%);
+}
+section #dashboard .red-me {
+  color: hsl(356, 69%, 56%);
+}
+section #dashboard .top {
+  position: absolute;
+  top: 0.2em;
+  left: -2.2em;
+  animation: upArr infinite 1s;
+}
+section #dashboard .down {
+  position: absolute;
+  top: 0.2em;
+  left: 2.2em;
+  animation: dwArr infinite 1s;
+}
+
+@media (min-width: 1200px) {
+  section {
+    margin: 10px auto;
+    max-width: 1300px;
+    padding: 2em;
+  }
+  section .top-header {
+    position: relative;
+    top: 20px;
+    padding: 0 2em;
+    z-index: 1;
+  }
+  section #dashboard .item {
+    grid-column: 255px;
+  }
+  section #dashboard .dash {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+  section #dashboard .dashboard-sub {
+    margin: 1.5em 0;
+  }
+  section .top-bg {
+    height: 300px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
